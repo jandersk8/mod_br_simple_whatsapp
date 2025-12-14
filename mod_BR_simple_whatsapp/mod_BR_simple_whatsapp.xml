@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>BR Simple Whatsapp</name>
+    <author>Janderson Moreira</author>
+    <creationDate>December 2025</creationDate>
+    <copyright>Copyright (c) 2025 Janderson Moreira. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>jandersonmm@gmail.com</authorEmail>
+    <version>1.0.2</version>
+    <description>MOD_BR_SIMPLE_WHATSAPP_XML_DESCRIPTION</description>
+
+    <namespace path="src">Br\Module\SimpleWhatsapp</namespace>
+
+    <files>
+        <filename module="mod_BR_simple_whatsapp">mod_BR_simple_whatsapp.xml</filename>
+        <folder>services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <folder>media</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                
+                <field 
+                    name="help_note" 
+                    type="note" 
+                    class="alert alert-warning" 
+                    label="SETUP INSTRUCTIONS"
+                    description="&lt;strong&gt;1. PHONE:&lt;/strong&gt; Type only numbers (Country + Area + Phone). Ex: 558590000000.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;2. POSITION:&lt;/strong&gt; Select a position like 'footer', 'debug' or 'bottom' on the right panel.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;3. MENU ASSIGNMENT:&lt;/strong&gt; Click on the 'Menu Assignment' tab above and select 'On all pages'."
+                />
+
+                <field 
+                    name="phone_number" 
+                    type="text" 
+                    label="Phone Number" 
+                    description="Type only numbers. Example: 558590000000"
+                    default="558590000000"
+                    required="true"
+                    filter="integer" 
+                />
+
+                <field 
+                    name="icon_size" 
+                    type="number" 
+                    label="Icon Size (px)" 
+                    description="Width and Height of the button in pixels."
+                    default="60" 
+                    min="30"
+                    max="150"
+                />
+
+                <field 
+                    name="pos_bottom" 
+                    type="number" 
+                    label="Bottom Distance (px)" 
+                    default="65" 
+                />
+
+                <field 
+                    name="pos_right" 
+                    type="number" 
+                    label="Right Distance (px)" 
+                    default="40" 
+                />
+
+                <field 
+                    name="pulse_effect" 
+                    type="radio" 
+                    layout="joomla.form.field.radio.switcher"
+                    label="Pulse Animation" 
+                    default="0"
+                >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
