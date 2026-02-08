@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>BR Simple Whatsapp</name>
+    <version>1.0</version>
+    <author>Janderson Moreira</author>
+    <creationDate>February 2026</creationDate>
+    <copyright>Copyright (c) 2026 Janderson Moreira. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>jandersonmm@gmail.com</authorEmail>
+    <authorUrl>https://github.com/jandersk8</authorUrl>
+    
+    <description>A simple, lightweight, and floating WhatsApp button.</description>
+
+    <namespace path="src">Br\Module\SimpleWhatsapp</namespace>
+
+    <updateservers>
+        <server type="extension" priority="1" name="BR Simple Whatsapp Updates">https://raw.githubusercontent.com/jandersk8/mod_br_simple_whatsapp/main/update.xml</server>
+    </updateservers>
+
+    <files>
+        <filename module="mod_br_simple_whatsapp">mod_br_simple_whatsapp.php</filename>
+        <folder>services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <folder>media</folder>
+        <file>LICENSE.txt</file>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                
+                <field 
+                    name="help_note" 
+                    type="note" 
+                    class="alert alert-warning" 
+                    label="SETUP INSTRUCTIONS"
+                    description="&lt;strong&gt;1. PHONE:&lt;/strong&gt; Type only numbers (Country + Area + Phone). Ex: 558590000000.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;2. POSITION:&lt;/strong&gt; Select a position like 'footer', 'debug' or 'bottom'.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;3. MENU ASSIGNMENT:&lt;/strong&gt; Click on 'Menu Assignment' tab and select 'On all pages'."
+                />
+
+                <field 
+                    name="phone_number" 
+                    type="text" 
+                    label="Phone Number" 
+                    description="Type only numbers. Example: 558590000000"
+                    default="558590000000"
+                    required="true"
+                    filter="integer" 
+                />
+
+                <field 
+                    name="icon_size" 
+                    type="number" 
+                    label="Icon Size (px)" 
+                    description="Width and Height of the button in pixels."
+                    default="60" 
+                    min="30"
+                    max="150"
+                />
+
+                <field 
+                    name="pos_bottom" 
+                    type="number" 
+                    label="Bottom Distance (px)" 
+                    default="65" 
+                />
+
+                <field 
+                    name="pos_right" 
+                    type="number" 
+                    label="Right Distance (px)" 
+                    default="40" 
+                />
+
+                <field 
+                    name="pulse_effect" 
+                    type="radio" 
+                    layout="joomla.form.field.radio.switcher"
+                    label="Pulse Animation" 
+                    default="0"
+                >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="Module Class Suffix"
+                    description="A suffix to be applied to the CSS class of the module."
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
