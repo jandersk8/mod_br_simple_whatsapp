@@ -1,4 +1,11 @@
 <?php
+/**
+ * @package     BR.SimpleWhatsapp
+ * @author      Janderson Moreira
+ * @copyright   Copyright (C) 2026 Janderson Moreira
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
 namespace Br\Module\SimpleWhatsapp\Site\Dispatcher;
 
 defined('_JEXEC') or die;

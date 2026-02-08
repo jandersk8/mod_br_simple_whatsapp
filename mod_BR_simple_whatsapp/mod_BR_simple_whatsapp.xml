@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" client="site" method="upgrade">
     <name>BR Simple Whatsapp</name>
-    <author>Janderson Moreira</author>
-    <creationDate>December 2025</creationDate>
-    <copyright>Copyright (c) 2025 Janderson Moreira. All rights reserved.</copyright>
+    <version>1.0</version> <author>Janderson Moreira</author>
+    <creationDate>February 2026</creationDate>
+    <copyright>Copyright (c) 2026 Janderson Moreira. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>jandersonmm@gmail.com</authorEmail>
-    <version>1.0.2</version>
-    <description>MOD_BR_SIMPLE_WHATSAPP_XML_DESCRIPTION</description>
+    <authorUrl>https://github.com/jandersk8</authorUrl>
+    
+    <description><![CDATA[
+        <h3>BR Simple Whatsapp</h3>
+        <p>A simple, lightweight, and floating WhatsApp button for Joomla.</p>
+        <p><strong>QUICK SETUP GUIDE:</strong></p>
+        <ul>
+            <li><strong>Phone:</strong> Use only numbers (Country + Area + Phone). Ex: 558590000000.</li>
+            <li><strong>Position:</strong> Publish in 'footer' or 'debug'.</li>
+            <li><strong>Pages:</strong> Set 'Menu Assignment' to 'On all pages'.</li>
+        </ul>
+    ]]></description>
 
     <namespace path="src">Br\Module\SimpleWhatsapp</namespace>
+
+    <updateservers>
+        <server type="extension" priority="1" name="BR Simple Whatsapp Updates">https://raw.githubusercontent.com/jandersk8/mod_br_simple_whatsapp/main/update.xml</server>
+    </updateservers>
 
     <files>
         <filename module="mod_BR_simple_whatsapp">mod_BR_simple_whatsapp.xml</filename>
@@ -18,7 +32,7 @@
         <folder>tmpl</folder>
         <folder>language</folder>
         <folder>media</folder>
-    </files>
+        <file>LICENSE.txt</file> </files>
 
     <config>
         <fields name="params">
